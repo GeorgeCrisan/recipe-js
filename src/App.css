@@ -22,3 +22,18 @@
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+
+.to-center {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.special-css-button {
+  min-width: 200px; }
+
+.modal-style {
+  background-color: grey; }
+
+.text-area-height {
+  min-height: 250px; }
