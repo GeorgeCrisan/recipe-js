@@ -45,11 +45,18 @@ class App extends Component {
     localStorage.setItem("george_recipes",JSON.stringify(recipes));
   }
 
+  validateName(value){
+     if(value.target == "")
+        alert("name is requiered");
+        return false;
+  }
+
   componentDidMount(){
     if(this.state.recipes.length < 0){
    let getData = this.readData();
    this.setState({recipes: getData});
     }
+
 
 }
 
@@ -90,6 +97,8 @@ updateCurrentHowToCookIt(howToCookIt,currentIndex){
 }
 
    updateNewRecipeName(recipeName){
+        if(recipeName == "")
+           alert("name is requiered");
         this.setState({newestRecipe:{recipeName:recipeName,
           ingredients:this.state.newestRecipe.ingredients
         ,howToCookIt:this.state.newestRecipe.howToCookIt}});
@@ -111,6 +120,10 @@ updateNewRecipeHowToCookIt(howToCookIt){
 }//Update newestRecipeName 
 
 updateRealState(){
+   if(this.state.newestRecipe.recipeName == ""){
+     alert('Name is requiered. No empty or null value allowed');
+     return false;
+   }
    console.log("merge");
     const stateTemp = this.state.recipes;
     stateTemp.push(this.state.newestRecipe);
