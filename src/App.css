@@ -1,5 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Pacifico|Indie+Flower|PT+Sans+Caption");
 .App {
   text-align: center; }
+  .App h1 {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px black; }
+  .App h2 {
+    font-family: 'Pacifico', serif;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    font-size: 30px;
+    color: #7EC0EE;
+    text-shadow: 1px 1.5px black; }
+
+.ol-style {
+  padding: 10px 40px 10px 40px; }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -17,6 +33,27 @@
 .App-intro {
   font-size: large; }
 
+.panel-title {
+  width: 100%; }
+
+.panel-title > a {
+  font-size: 24px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-family: 'Pacifico', cursive; }
+
+.panel-title > a:hover, .panel-title > a:active, .panel-title > a:focus {
+  color: #7EC0EE;
+  text-shadow: 2px 2px black;
+  text-decoration: none; }
+
+.iconfa {
+  padding-right: 15px; }
+
+.cooking-instructions {
+  padding: 15px; }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg); }
@@ -30,10 +67,30 @@
   justify-content: center; }
 
 .special-css-button {
-  min-width: 200px; }
+  min-width: 150px; }
 
 .modal-style {
   background-color: grey; }
 
 .text-area-height {
   min-height: 250px; }
+
+.h1-specific {
+  margin: 50px 0 50px 0; }
+
+.panel-body {
+  background: #fff; }
+
+.align-left {
+  text-align: left;
+  font-family: 'Bree Serif', serif;
+  font-size: 20px;
+  color: #444444;
+  margin: 30px 0 30px 0;
+  border: 1px solid grey;
+  border-radius: 30px;
+  text-indent: 10px; }
+
+.warning-ico {
+  padding: 0 5px 0 5px;
+  color: red; }
