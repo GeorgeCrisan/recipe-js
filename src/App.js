@@ -45,11 +45,6 @@ class App extends Component {
     localStorage.setItem("george_recipes",JSON.stringify(recipes));
   }
 
-  validateName(value){
-     if(value.target == "")
-        alert("name is requiered");
-        return false;
-  }
 
   componentDidMount(){
     if(this.state.recipes.length < 0){
@@ -97,7 +92,7 @@ updateCurrentHowToCookIt(howToCookIt,currentIndex){
 }
 
    updateNewRecipeName(recipeName){
-        if(recipeName == "")
+        if(recipeName === "")
            alert("name is requiered");
         this.setState({newestRecipe:{recipeName:recipeName,
           ingredients:this.state.newestRecipe.ingredients
@@ -120,7 +115,7 @@ updateNewRecipeHowToCookIt(howToCookIt){
 }//Update newestRecipeName 
 
 updateRealState(){
-   if(this.state.newestRecipe.recipeName == ""){
+   if(this.state.newestRecipe.recipeName === ""){
      alert('Name is requiered. No empty or null value allowed');
      return false;
    }
@@ -172,7 +167,7 @@ updateRealState(){
           <Accordion >
             {recipes.map((recipe,index)=>{
                return(
-                 <Panel className="hover" header={recipe.recipeName} eventKey={index} key={index} >
+                 <Panel className="hover panel-warning panel-mode" header={recipe.recipeName} eventKey={index} key={index} >
                  
                    <h2 ><i className="fa fa-cutlery iconfa" aria-hidden="true"></i> Ingredients</h2>
                    <ol className="align-left ol-style">
@@ -251,7 +246,8 @@ updateRealState(){
                     <ControlLabel>Recipe Name</ControlLabel>
                     <FormControl type="text" value={this.state.newestRecipe.recipeName}
                                  placeholder="Insert Name" 
-                                 onChange={(event)=>this.updateNewRecipeName(event.target.value)}>
+                                 onChange={(event)=>this.updateNewRecipeName(event.target.value)}
+                                 >
                        
                     </FormControl>
                   </FormGroup>
@@ -267,7 +263,8 @@ updateRealState(){
                 <ControlLabel>How to Cook it</ControlLabel>
                 <FormControl type="text" componentClass="textarea" className='text-area-height' value={this.state.newestRecipe.howToCookIt}
                              placeholder="Type instruction of how to cook" 
-                             onChange={(event)=>this.updateNewRecipeHowToCookIt(event.target.value)}>
+                             onChange={(event)=>this.updateNewRecipeHowToCookIt(event.target.value)}
+                             >
                    
                 </FormControl>
 

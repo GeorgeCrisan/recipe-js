@@ -41,6 +41,7 @@
   display: block;
   width: 100%;
   cursor: pointer;
+  color: black;
   font-family: 'Pacifico', cursive; }
 
 .panel-title > a:hover, .panel-title > a:active, .panel-title > a:focus {
@@ -94,3 +95,7 @@
 .warning-ico {
   padding: 0 5px 0 5px;
   color: red; }
+
+.panel-mode {
+  max-width: 600px;
+  margin: auto; }
